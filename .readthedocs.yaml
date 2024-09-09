@@ -8,6 +8,9 @@ build:
 python:
   install:
     - requirements: docs/requirements.txt
+    # Install self before building docs
+    - method: pip
+      path: .
 
 sphinx:
   configuration: docs/source/conf.py
